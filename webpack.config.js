@@ -28,10 +28,7 @@ module.exports = {
       template: "./src/index.pug",
       filename: "index.html"
     }),
-    new ESLintPlugin({
-      // Опции плагина ESLint
-      // Например, вы можете указать правила ESLint, игнорируемые файлы и т.д.
-    }),
+    new ESLintPlugin(),
     new StylelintPlugin(),
   ],
   optimization: {

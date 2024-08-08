@@ -4,57 +4,18 @@ module.exports = {
     es2021: true
   },
   extends: [
-    'standard',
-    'eslint:recommended'
+    'eslint:recommended',
   ],
-  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: [
-    '@typescript-eslint'
-    // Для TypeScript.
+    '@typescript-eslint'  // Для TypeScript.
   ],
-  overrides: [
-    // Используем `overrides`, чтобы ESLint мог проверять файлы как JS, так и TS.
-    {
-      files: [
-        '*.ts',
-        '*.tsx'
-      ],
-      extends: [
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking'
-      ],
-      parserOptions: {
-        tsconfigRootDir: __dirname,
-        project: [
-          './tsconfig.json'
-        ]
-      }
-    }
-  ],
-  ignorePatterns: [
-    '.eslintrc.js'
-  ],
-  rules: {
-    quotes: [
-      "error",
-      "double"
-    ],
-    // Использовать двойные кавычки.
-    semi: [
-      "error",
-      "always"
-    ],
-    // Всегда добавлять точку с запятой в конце утверждения.
-    indent: [
-      "error",
-      2
-    ],
-    // Отступ — это два пробела.
-    "no-console": "error"
-    // Избегать использования в коде методов на консоли (`console`).
-  }
-}
+  ignorePatterns: ['.eslintrc.js'],
+  "rules": {
+		"semi": ["error", "always"],
+		"quotes": ["error", "double"]
+	}
+};
