@@ -1,2 +1,0 @@
-# Игнорируем все файлы в директории node_modules
-node_modules/*
